@@ -1,0 +1,45 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Linting
+.ruff_cache/
+
+# Generated files
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Results: keep directory structure
+results/figures/*
+results/metrics/*
+!results/figures/.gitkeep
+!results/metrics/.gitkeep
+
+# Environment variables
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/

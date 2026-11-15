@@ -1,0 +1,32 @@
+
+project:
+  name: "Phase Noise Tracking Using EKF"
+  seed: 42
+
+signal:
+  modulation: "QPSK"
+  num_symbols: 10000
+  samples_per_symbol: 1
+  amplitude: 1.0
+
+channel:
+  snr_db: 20.0
+
+phase_noise:
+  initial_phase: 0.0
+  initial_frequency: 0.001
+  phase_process_variance: 0.00001
+  frequency_process_variance: 0.00000001
+
+ekf:
+  initial_phase_variance: 0.1
+  initial_frequency_variance: 0.01
+  measurement_variance: 0.005
+
+experiments:
+  snr_values: [0, 5, 10, 15, 20, 25, 30]
+  num_monte_carlo_runs: 20
+
+output:
+  figure_directory: "results/figures"
+  metrics_directory: "results/metrics"
